@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlexPanels/DaysofThunder</title>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="panels">
+        <div class="panel panel1">
+          <p>Russell</p>
+          <p>OKC</p>
+          <p>Westbrook</p>
+        </div>
+        <div class="panel panel2">
+          <p>Kevin</p>
+          <p>GSW</p>
+          <p>Durant</p>
+        </div>
+        <div class="panel panel3">
+          <p>James</p>
+          <p>HOU</p>
+          <p>Harden</p>
+        </div>
+      </div>
+    
+      <script>
+        const panels = document.querySelectorAll('.panel'); //all the panels
+        function toggleOpen() { //when a click is heard the panels will open
+          this.classList.toggle('open');
+        }
+        function toggleActive(e) {
+          console.log(e.propertyName);
+          if (e.propertyName.includes('flex')) {
+            this.classList.toggle('open-active');
+          }
+        }
+        panels.forEach(panel => panel.addEventListener('click', toggleOpen)); //Listens for a click
+        panels.forEach(panel => panel.addEventListener('transitionend', toggleActive)); //when the click is heard that's when the panel that's clicked on will open
+      </script>
+    
+</body>
+</html>
