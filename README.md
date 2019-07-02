@@ -2,7 +2,7 @@
 
 This was the 5th project from the #JavaScript30 that i've completed.
 I made a Flex Gallery with my own photography of NBA Players.
-When you click on image, it expands
+When you click on an NBA player within 1 of the 3 Flexboxes, it expands to 5x its size and the players full name transitions from the top and from the bottom.
 
 Things I learned:
 <ul>
